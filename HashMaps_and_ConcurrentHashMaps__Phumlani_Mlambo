@@ -1,0 +1,53 @@
+import java.util.HashMap;
+
+/**
+ * Example1
+ */
+public class Example1 {
+
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        map.put("vishal", 10);
+        map.put("sachin", 30);
+        map.put("vaibhav", 20);
+
+        System.out.println("Size of map is:- "
+        + map.size());
+
+        System.out.println(map);
+
+        if (map.containsKey("vishal")) {
+ 
+            Integer a = map.get("vishal");
+            System.out.println("value for key"
+                               + " \"vishal\" is:- " + a);
+        }
+    }
+}
+
+
+import java.util.concurrent.ConcurrentHashMap;
+
+public class conc
+ {
+     public static void main(String[] args) {
+         
+        ConcurrentHashMap<Integer, String> m = new ConcurrentHashMap<>();
+
+        m.put(100, "Hello");
+        m.put(101, "Geeks");
+        m.put(102, "Geeks");
+
+        m.putIfAbsent(101, "Hello");
+        m.remove(101, "Geeks");
+        m.putIfAbsent(103, "Hello");
+
+        m.replace(101, "Hello", "For");
+        System.out.println(m);
+    }
+
+     }
+    
+
+
